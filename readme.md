@@ -4,7 +4,7 @@ small pease of code for the Phonebook challange on HTB.
 https://app.hackthebox.eu/challenges/phonebook#
 
 ```
-the PhonebookCTF site will take the star sign '*' as a wildcard. 
+the PhonebookCTF site will take the asterisk sign '*' as a wildcard. 
 this means that when we will put '*' under the username and password 
 the site will refere us to a valid user profile, 
 actually it refere us to the first user in the DB list. 
